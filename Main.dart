@@ -1,15 +1,22 @@
+import 'Node.dart';
+import 'ListaDuplamenteEncadeada.dart';
 
-class Node{
-  var conteudo;
-  Node proximo = new Node(null);
-  Node anterior = new Node(null);
+void main(){
+  ListaDuplamenteEncadeada list = new ListaDuplamenteEncadeada();
 
-  Node(conteudo){
-    this.conteudo=conteudo;
-  }
+  list.addFinal(1);
+  list.addFinal(2);
+  list.addFinal(3);
+  list.addFinal(4);
+  list.addFinal(5);
 
-  @override
-  String toString() {
-    return 'Node{conteudo: $conteudo, proximo: $proximo, anterior: $anterior}';
-  }
+  print(list);
+
+  list.add(2, 44);
+
+  print(list);
+
+  list.remove(2);
+
+  print(list);
 }
