@@ -14,8 +14,4 @@ class Node{
     this.anterior=conteudo;
   }
 
-  @override
-  String toString() {
-    return 'Node{conteudo: $conteudo, proximo: $proximo, anterior: $anterior}';
-  }
 }

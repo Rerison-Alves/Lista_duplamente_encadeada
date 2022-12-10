@@ -1,10 +1,10 @@
-import 'dart:math';
+import 'dart:io';
 
 import 'Multiplica.dart';
-import 'Node.dart';
-import 'ListaDuplamenteEncadeada.dart';
 
 void main(){
-  Multiplica multiplica = new Multiplica();
-  print(multiplica.ConvertLista(5666));
+  print("Digite 2 números:");
+  num? number1 = num.tryParse(stdin.readLineSync().toString());
+  num? number2 = num.tryParse(stdin.readLineSync().toString());
+  MultiplicacaoDeNumerosGrandes.Multiplicar(number1, number2);
 }

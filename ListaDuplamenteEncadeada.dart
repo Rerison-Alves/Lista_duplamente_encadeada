@@ -19,6 +19,21 @@ class ListaDuplamenteEncadeada{
     tamanho++;
   }
 
+  void addInicio(conteudo){
+    Node newNo = new Node(conteudo);
+    newNo.setProximo(firstNo);
+    newNo.setAnterior(null);
+    if(firstNo == null){
+      firstNo = newNo;
+      lastNo = newNo;
+      tamanho++;
+      return;
+    }
+    firstNo?.setAnterior(newNo);
+    firstNo = newNo;
+    tamanho++;
+  }
+
   void add(int index, conteudo){
     Node newNo = new Node(conteudo);
     Node? assistantNo = getNode(index);
